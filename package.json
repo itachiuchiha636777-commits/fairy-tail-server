@@ -1,11 +1,13 @@
 {
-  "name": "fairy-tail-fight-server",
+  "name": "legend-of-fairy-tail-server",
   "version": "1.0.0",
+  "description": "16-Fighter Real-Time WebSocket Server for Hugging Face Spaces",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "ws": "^8.16.0"
+    "ws": "^8.18.0"
   }
 }
+
