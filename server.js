@@ -1,15 +1,15 @@
 const http = require("http");
 const WebSocket = require("ws");
 
-// Render.com automatically injects process.env.PORT (default 10000); fallback 3000/7860
-const PORT = process.env.PORT || 3000;
+// Render Singapore Server automatically injects process.env.PORT (10000); fallback 7860 for HF/Local
+const PORT = process.env.PORT || 7860;
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, {
     "Content-Type": "text/plain; charset=utf-8",
     "Access-Control-Allow-Origin": "*",
   });
-  res.end("Legend of Fairy Tail 16-Fighter Server is Running Live! 🟢");
+  res.end("Legend of Fairy Tail 16-Fighter Server (Render Singapore + HF Static) is Running Live! 🟢");
 });
 
 const wss = new WebSocket.Server({
@@ -238,4 +238,3 @@ wss.on("close", () => {
 server.listen(PORT, "0.0.0.0", () => {
   console.log(`Authoritative 16-Fighter Server listening on port ${PORT}`);
 });
-          
